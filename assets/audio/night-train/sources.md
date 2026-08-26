@@ -131,3 +131,11 @@
 - 长段之间使用 10 秒等功率交叉淡化，首尾另做 10 秒环形交叉淡化；未使用一小段音效首尾硬接的做法。
 - 对约 3 kHz 的金属锐度做衰减，并在约 6.2 kHz 低通；随后校准感知响度，使轮轨仍为主层但比旧版柔和。
 - rail_clicks_master.wav 与 rail_clicks.mp3 均为 15:00；MP3 为 44.1 kHz、192 kbps。night-train-v9-preview.mp3 为包含独立生活事件分轨的 15 分钟验收试听版。
+
+## 轮轨主导低沙沙版
+
+- 根据试听反馈，上一版多实录叠加时把实录中的连续宽频底噪一同累积，造成沙沙声掩盖轮轨。
+- 新版移除 train-interior-trp.mp3 的持续叠加；以 track-joints-kaylerustone.mp3 为清晰主层，night-train-inside-tineidae.mp3 与 train-rhythm-rucisko.mp3 仅作为较低的节奏变化层。
+- 三条素材分别制作无缝循环单元；高通约 420–500 Hz、低通约 3.4–3.8 kHz，并使用降噪与扩展门压低持续底噪、保留轮轨瞬态。
+- 仍采用六个 160 秒长段、约 ±1.8% 的轻微速度变化、10 秒段间及首尾等功率交叉淡化。600 Hz 以下持续能量较上一版降低约 4 dB，轮轨清晰频段相对靠前。
+- rail_clicks.mp3 和 rail_clicks_master.wav 均为 15:00；night-train-v10-preview.mp3 为完整分轨合成试听。上一版备份为 rail_clicks-v9-multirecord-windy-backup.mp3。
