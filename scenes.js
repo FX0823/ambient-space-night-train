@@ -45,7 +45,7 @@ window.SCENES = [
     cover: "./assets/images/forest-room.png", video: "./assets/video/forest-cabin-loop.mp4",
     fullMixAudio: "./assets/audio/forest-cabin/forest-cabin-15min.mp3",
     tracks: [
-      { id: "wind", name: "树叶轻风", url: "./assets/audio/forest-cabin/forest_wind.mp3", kind: "loop", volume: 0.72, control: true },
+      { id: "wind", name: "树叶轻风", url: "./assets/audio/forest-cabin/forest_wind.mp3", kind: "loop", volume: 0.76, control: true },
       { id: "birds", name: "清晨鸟鸣", url: "./assets/audio/forest-cabin/morning_birds.mp3", kind: "loop", volume: 0.56, control: true },
       { id: "fire", name: "小炉火", url: "./assets/audio/forest-cabin/small_fireplace.mp3", kind: "loop", volume: 0.6, control: true },
       { id: "room", name: "木屋空气", url: "./assets/audio/forest-cabin/cabin_room_tone.mp3", kind: "loop", volume: 0.6, control: false },
@@ -54,9 +54,9 @@ window.SCENES = [
       { id: "cat", name: "猫呼噜", url: "./assets/audio/forest-cabin/cat_purr.mp3", kind: "event", volume: 0.42, control: false, times: [720] }
     ],
     presets: {
-      focus: { wind: 0.72, birds: 0.38, fire: 0.62, room: 0.62, chime: 0.18, animal: 0.2, cat: 0.28 },
-      relax: { wind: 0.7, birds: 0.56, fire: 0.58, room: 0.58, chime: 0.48, animal: 0.34, cat: 0.42 },
-      sleep: { wind: 0.45, birds: 0.12, fire: 0.6, room: 0.56, chime: 0.08, animal: 0.1, cat: 0.3 }
+      focus: { wind: 0.76, birds: 0.38, fire: 0.62, room: 0.62, chime: 0.18, animal: 0.2, cat: 0.28 },
+      relax: { wind: 0.76, birds: 0.56, fire: 0.58, room: 0.58, chime: 0.48, animal: 0.34, cat: 0.42 },
+      sleep: { wind: 0.46, birds: 0.12, fire: 0.6, room: 0.56, chime: 0.08, animal: 0.1, cat: 0.3 }
     }
   },
   {
