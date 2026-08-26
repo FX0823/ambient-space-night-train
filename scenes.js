@@ -86,6 +86,30 @@ window.SCENES = [
     }
   },
   {
+    id: "coastal-room", name: "海边小城房间",
+    audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
+    description: "坐在二楼的小房间里，海浪从远处传来，纱帘偶尔被海风轻轻带动。",
+    cover: "./assets/images/coastal-room-cover.jpg",
+    video: "./assets/video/coastal-room/coastal-room.mp4",
+    fullMixAudio: "./assets/audio/coastal-room/coastal-room-15min-demo.mp3",
+    tracks: [
+      { id: "waves", name: "远处海浪", url: "./assets/audio/coastal-room/distant_ocean_waves.mp3", kind: "loop", volume: 0.45, control: true },
+      { id: "breeze", name: "柔和海风", url: "./assets/audio/coastal-room/soft_sea_breeze.mp3", kind: "loop", volume: 0.20, control: true },
+      { id: "town", name: "小城声音", url: "./assets/audio/coastal-room/coastal_town_ambience.mp3", kind: "loop", volume: 0.05, control: true },
+      { id: "room", name: "房间空气", url: "./assets/audio/coastal-room/seaside_room_tone.mp3", kind: "loop", volume: 0.15, control: false },
+      { id: "curtain", name: "纱帘轻动", url: "./assets/audio/coastal-room/curtain_rustle.wav", kind: "event", volume: 0.48, control: false, times: [80, 310, 520, 830] },
+      { id: "scooter", name: "远处电动车", url: "./assets/audio/coastal-room/scooter_pass.wav", kind: "event", volume: 0.34, control: false, times: [210] },
+      { id: "scooter-alt", name: "电动车经过", url: "./assets/audio/coastal-room/scooter_pass_alt.wav", kind: "event", volume: 0.36, control: false, times: [630] },
+      { id: "seabirds", name: "远处海鸟", url: "./assets/audio/coastal-room/distant_seabirds.wav", kind: "event", volume: 0.82, control: false, times: [390] },
+      { id: "seabirds-alt", name: "远处海鸟轻鸣", url: "./assets/audio/coastal-room/distant_seabirds_alt.wav", kind: "event", volume: 0.78, control: false, times: [780] }
+    ],
+    presets: {
+      focus: { waves: 0.45, breeze: 0.15, town: 0.05, room: 0.25, curtain: 0.25, scooter: 0.12, "scooter-alt": 0.12, seabirds: 0.25, "seabirds-alt": 0.20 },
+      relax: { waves: 0.45, breeze: 0.25, town: 0.10, room: 0.15, curtain: 0.40, scooter: 0.34, "scooter-alt": 0.36, seabirds: 0.82, "seabirds-alt": 0.78 },
+      sleep: { waves: 0.55, breeze: 0.10, town: 0.03, room: 0.25, curtain: 0.18, scooter: 0, "scooter-alt": 0, seabirds: 0.08, "seabirds-alt": 0.06 }
+    }
+  },
+  {
     id: "night-train", name: "夜行列车",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
     description: "坐在缓慢前行的夜班列车里，听轮轨规律经过，也听见车厢偶尔的生活声。",
