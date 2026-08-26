@@ -97,11 +97,11 @@ window.SCENES = [
       { id: "breeze", name: "柔和海风", url: "./assets/audio/coastal-room/soft_sea_breeze.mp3", kind: "loop", volume: 0.20, control: true },
       { id: "town", name: "小城声音", url: "./assets/audio/coastal-room/coastal_town_ambience.mp3", kind: "loop", volume: 0.05, control: true },
       { id: "room", name: "房间空气", url: "./assets/audio/coastal-room/seaside_room_tone.mp3", kind: "loop", volume: 0.15, control: false },
-      { id: "curtain", name: "纱帘轻动", url: "./assets/audio/coastal-room/curtain_rustle.wav", kind: "event", volume: 0.48, control: false, times: [80, 310, 520, 830] },
-      { id: "scooter", name: "远处电动车", url: "./assets/audio/coastal-room/scooter_pass.wav", kind: "event", volume: 0.34, control: false, times: [210] },
-      { id: "scooter-alt", name: "电动车经过", url: "./assets/audio/coastal-room/scooter_pass_alt.wav", kind: "event", volume: 0.36, control: false, times: [630] },
-      { id: "seabirds", name: "远处海鸟", url: "./assets/audio/coastal-room/distant_seabirds.wav", kind: "event", volume: 0.82, control: false, times: [390] },
-      { id: "seabirds-alt", name: "远处海鸟轻鸣", url: "./assets/audio/coastal-room/distant_seabirds_alt.wav", kind: "event", volume: 0.78, control: false, times: [780] }
+      { id: "curtain", name: "纱帘轻动", url: "./assets/audio/coastal-room/curtain_rustle.wav", kind: "event", volume: 0.48, control: false, times: [75, 250, 340, 470, 590, 710, 860] },
+      { id: "scooter", name: "远处电动车", url: "./assets/audio/coastal-room/scooter_pass.wav", kind: "event", volume: 0.34, control: false, times: [205, 755] },
+      { id: "scooter-alt", name: "电动车经过", url: "./assets/audio/coastal-room/scooter_pass_alt.wav", kind: "event", volume: 0.36, control: false, times: [500] },
+      { id: "seabirds", name: "远处海鸟", url: "./assets/audio/coastal-room/distant_seabirds.wav", kind: "event", volume: 0.82, control: false, times: [140, 650] },
+      { id: "seabirds-alt", name: "远处海鸟轻鸣", url: "./assets/audio/coastal-room/distant_seabirds_alt.wav", kind: "event", volume: 0.78, control: false, times: [390, 820] }
     ],
     presets: {
       focus: { waves: 0.45, breeze: 0.15, town: 0.05, room: 0.25, curtain: 0.25, scooter: 0.12, "scooter-alt": 0.12, seabirds: 0.25, "seabirds-alt": 0.20 },
