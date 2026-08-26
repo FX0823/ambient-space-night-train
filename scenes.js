@@ -10,7 +10,7 @@ window.SCENES = [
       { id: "heater", name: "室内暖气", url: "./assets/audio/rain-study/tracks/room_heater.mp3", kind: "loop", volume: 0.78, control: true },
       { id: "cat", name: "猫叫", url: "./assets/audio/rain-study/tracks/cat_meow.mp3", kind: "event", volume: 0.55, control: true, times: [94, 418, 704] },
       { id: "book", name: "翻书", url: "./assets/audio/rain-study/tracks/book_pages.mp3", kind: "event", volume: 0.7, control: true, times: [18, 82, 149, 218, 294, 371, 449, 532, 618, 707, 795, 872] },
-      { id: "thunder", name: "远雷", url: "./assets/audio/rain-study/tracks/distant_thunder.mp3", kind: "event", volume: 0.62, control: true, times: [52, 184, 327, 485, 662, 834] }
+      { id: "thunder", name: "远雷", url: "./assets/audio/rain-study/tracks/distant_thunder.mp3", kind: "event", volume: 0.62, control: true, times: [50, 165, 260, 390, 505, 650, 750, 835] }
     ],
     presets: {
       focus: { rain: 0.72, heater: 0.68, cat: 0.2, book: 0.42, thunder: 0.25 },
