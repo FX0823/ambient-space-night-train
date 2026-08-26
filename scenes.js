@@ -7,15 +7,15 @@ window.SCENES = [
     fullMixAudio: "./assets/audio/rain-study-15min.mp3",
     tracks: [
       { id: "rain", name: "窗外雨声", url: "./assets/audio/rain-study/tracks/rain_window.mp3", kind: "loop", volume: 0.72, control: true },
-      { id: "heater", name: "室内暖气", url: "./assets/audio/rain-study/tracks/room_heater.mp3", kind: "loop", volume: 0.35, control: false },
-      { id: "cat", name: "猫叫", url: "./assets/audio/rain-study/tracks/cat_meow.mp3", kind: "event", volume: 0.55, control: true, times: [247, 621] },
-      { id: "book", name: "翻书", url: "./assets/audio/rain-study/tracks/book_pages.mp3", kind: "event", volume: 0.7, control: true, times: [142, 317, 529, 764] },
-      { id: "thunder", name: "远雷", url: "./assets/audio/rain-study/tracks/distant_thunder.mp3", kind: "event", volume: 0.62, control: true, times: [96, 408, 713] }
+      { id: "heater", name: "室内暖气", url: "./assets/audio/rain-study/tracks/room_heater.mp3", kind: "loop", volume: 0.78, control: true },
+      { id: "cat", name: "猫叫", url: "./assets/audio/rain-study/tracks/cat_meow.mp3", kind: "event", volume: 0.55, control: true, times: [126, 621] },
+      { id: "book", name: "翻书", url: "./assets/audio/rain-study/tracks/book_pages.mp3", kind: "event", volume: 0.7, control: true, times: [32, 317, 529, 764] },
+      { id: "thunder", name: "远雷", url: "./assets/audio/rain-study/tracks/distant_thunder.mp3", kind: "event", volume: 0.62, control: true, times: [68, 408, 713] }
     ],
     presets: {
-      focus: { rain: 0.72, heater: 0.34, cat: 0.2, book: 0.42, thunder: 0.25 },
-      relax: { rain: 0.72, heater: 0.35, cat: 0.55, book: 0.7, thunder: 0.62 },
-      sleep: { rain: 0.5, heater: 0.38, cat: 0.14, book: 0.16, thunder: 0.1 }
+      focus: { rain: 0.72, heater: 0.68, cat: 0.2, book: 0.42, thunder: 0.25 },
+      relax: { rain: 0.72, heater: 0.78, cat: 0.55, book: 0.7, thunder: 0.62 },
+      sleep: { rain: 0.5, heater: 0.84, cat: 0.14, book: 0.16, thunder: 0.1 }
     }
   },
   {
