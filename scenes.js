@@ -64,6 +64,28 @@ window.SCENES = [
     }
   },
   {
+    id: "summer-afternoon-room", name: "蝉鸣午后老屋",
+    audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
+    description: "蝉鸣落在窗外，老风扇慢慢转着。像小时候暑假里一个安静、昏昏欲睡的下午。",
+    cover: "./assets/images/summer-afternoon-room-cover.jpg",
+    video: "./assets/video/summer-afternoon-room/summer-afternoon-room.mp4",
+    fullMixAudio: "./assets/audio/summer-afternoon-room/summer-afternoon-15min-demo.mp3",
+    tracks: [
+      { id: "cicadas", name: "夏日蝉鸣", url: "./assets/audio/summer-afternoon-room/summer_cicadas.mp3", kind: "loop", volume: 0.35, control: true },
+      { id: "fan", name: "老式风扇", url: "./assets/audio/summer-afternoon-room/vintage_fan.mp3", kind: "loop", volume: 0.25, control: true },
+      { id: "television", name: "老电视雪花", url: "./assets/audio/summer-afternoon-room/crt_tv_static.mp3", kind: "loop", volume: 0.13, control: true },
+      { id: "room", name: "老屋空气", url: "./assets/audio/summer-afternoon-room/old_room_tone.mp3", kind: "loop", volume: 0.15, control: false },
+      { id: "leaves", name: "窗外树叶", url: "./assets/audio/summer-afternoon-room/summer_leaves.mp3", kind: "loop", volume: 0.07, control: false },
+      { id: "marbles", name: "玻璃弹珠", url: "./assets/audio/summer-afternoon-room/glass_marbles.wav", kind: "event", volume: 0.30, control: false, times: [210] },
+      { id: "marbles-alt", name: "弹珠轻滚", url: "./assets/audio/summer-afternoon-room/glass_marbles_alt.wav", kind: "event", volume: 0.34, control: false, times: [630] }
+    ],
+    presets: {
+      focus: { cicadas: 0.25, fan: 0.35, television: 0.05, room: 0.2, leaves: 0.1, marbles: 0.1, "marbles-alt": 0 },
+      relax: { cicadas: 0.35, fan: 0.25, television: 0.15, room: 0.15, leaves: 0.07, marbles: 0.3, "marbles-alt": 0.34 },
+      sleep: { cicadas: 0.15, fan: 0.4, television: 0.08, room: 0.25, leaves: 0.07, marbles: 0, "marbles-alt": 0 }
+    }
+  },
+  {
     id: "night-train", name: "夜行列车",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
     description: "坐在缓慢前行的夜班列车里，听轮轨规律经过，也听见车厢偶尔的生活声。",
