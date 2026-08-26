@@ -287,10 +287,14 @@ async function playSpace() {
   if (!state.scene || !state.entered) return;
   const promises = [els.video.play()];
   state.nodes.forEach(({ track, audio }) => {
-    if (track.kind === "loop" || (audio.currentTime > 0 && !audio.ended)) promises.push(audio.play());
+    if (track.kind === "loop" || (audio.currentTime > 0 && !audio.ended)) {
+      audio.volume = 0;
+      promises.push(audio.play());
+    }
   });
   const results = await Promise.allSettled(promises);
   state.playing = true;
+  applyVolumes();
   state.lastTick = performance.now();
   els.player.classList.add("is-playing");
   els.play.setAttribute("aria-label", "暂停");
