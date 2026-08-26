@@ -74,14 +74,20 @@ window.SCENES = [
       { id: "rumble", name: "列车低频", url: "./assets/audio/night-train/train_low_rumble.mp3", kind: "loop", volume: 0.22, control: true },
       { id: "carriage", name: "车厢空气", url: "./assets/audio/night-train/carriage_room_tone.mp3", kind: "loop", volume: 0.12, control: true },
       { id: "air", name: "窗外空气", url: "./assets/audio/night-train/window_air_motion.mp3", kind: "loop", volume: 0.003, control: true },
-      { id: "details", name: "车厢结构细节", url: "./assets/audio/night-train/carriage_details.mp3", kind: "loop", volume: 0.018, control: false },
-      { id: "cup", name: "杯子与桌面", url: "./assets/audio/night-train/cup_detail.wav", kind: "event", volume: 0.34, control: true, times: [280, 710] },
-      { id: "cough", name: "远处轻咳", url: "./assets/audio/night-train/cough_detail.wav", kind: "event", volume: 0.55, control: true, times: [430] }
+      { id: "details", name: "车厢结构细节", url: "./assets/audio/night-train/carriage_details.mp3", kind: "loop", volume: 0.045, control: false },
+      { id: "horn", name: "远处汽笛", url: "./assets/audio/night-train/distant_horn.wav", kind: "event", volume: 0.65, control: true, times: [205, 520, 865] },
+      { id: "door", name: "车厢滑门", url: "./assets/audio/night-train/sliding_door.wav", kind: "event", volume: 0.4, control: true, times: [155, 375, 600, 805] },
+      { id: "steps", name: "走廊脚步", url: "./assets/audio/night-train/corridor_footsteps.wav", kind: "event", volume: 0.72, control: true, times: [55, 225, 395, 565, 775] },
+      { id: "seat-1", name: "座椅衣料", url: "./assets/audio/night-train/seat_shift_1.wav", kind: "event", volume: 0.65, control: false, times: [25, 345, 665] },
+      { id: "seat-2", name: "乘客轻动", url: "./assets/audio/night-train/seat_shift_2.wav", kind: "event", volume: 0.72, control: false, times: [95, 415, 735] },
+      { id: "seat-3", name: "衣料轻响", url: "./assets/audio/night-train/seat_shift_3.wav", kind: "event", volume: 0.78, control: false, times: [185, 505, 825] },
+      { id: "cup", name: "杯子与桌面", url: "./assets/audio/night-train/cup_detail.wav", kind: "event", volume: 0.72, control: true, times: [120, 300, 485, 680, 845] },
+      { id: "cough", name: "远处轻咳", url: "./assets/audio/night-train/cough_detail.wav", kind: "event", volume: 0.8, control: true, times: [270, 540, 750] }
     ],
     presets: {
-      focus: { rail: 0.62, rumble: 0.18, carriage: 0.12, air: 0.004, details: 0.02, cup: 0.18, cough: 0.2 },
-      relax: { rail: 0.55, rumble: 0.22, carriage: 0.12, air: 0.003, details: 0.018, cup: 0.34, cough: 0.55 },
-      sleep: { rail: 0.34, rumble: 0.18, carriage: 0.15, air: 0, details: 0.01, cup: 0.06, cough: 0.06 }
+      focus: { rail: 0.62, rumble: 0.18, carriage: 0.12, air: 0.004, details: 0.04, horn: 0.28, door: 0.22, steps: 0.4, "seat-1": 0.34, "seat-2": 0.38, "seat-3": 0.4, cup: 0.42, cough: 0.35 },
+      relax: { rail: 0.55, rumble: 0.22, carriage: 0.12, air: 0.003, details: 0.045, horn: 0.65, door: 0.4, steps: 0.72, "seat-1": 0.65, "seat-2": 0.72, "seat-3": 0.78, cup: 0.72, cough: 0.8 },
+      sleep: { rail: 0.34, rumble: 0.18, carriage: 0.15, air: 0, details: 0.015, horn: 0.08, door: 0.07, steps: 0.1, "seat-1": 0.1, "seat-2": 0.1, "seat-3": 0.1, cup: 0.08, cough: 0.08 }
     }
   }
 ];
