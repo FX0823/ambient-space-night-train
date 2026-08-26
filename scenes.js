@@ -76,13 +76,13 @@ window.SCENES = [
       { id: "television", name: "老电视雪花", url: "./assets/audio/summer-afternoon-room/crt_tv_static.mp3", kind: "loop", volume: 0.13, control: true },
       { id: "room", name: "老屋空气", url: "./assets/audio/summer-afternoon-room/old_room_tone.mp3", kind: "loop", volume: 0.15, control: false },
       { id: "leaves", name: "窗外树叶", url: "./assets/audio/summer-afternoon-room/summer_leaves.mp3", kind: "loop", volume: 0.07, control: false },
-      { id: "marbles", name: "玻璃弹珠", url: "./assets/audio/summer-afternoon-room/glass_marbles.wav", kind: "event", volume: 0.30, control: false, times: [210] },
-      { id: "marbles-alt", name: "弹珠轻滚", url: "./assets/audio/summer-afternoon-room/glass_marbles_alt.wav", kind: "event", volume: 0.34, control: false, times: [630] }
+      { id: "leaves-gust", name: "树叶阵风", url: "./assets/audio/summer-afternoon-room/summer_leaves_gust.wav", kind: "event", volume: 0.42, control: false, times: [210] },
+      { id: "leaves-gust-alt", name: "树叶轻动", url: "./assets/audio/summer-afternoon-room/summer_leaves_gust_alt.wav", kind: "event", volume: 0.46, control: false, times: [630] }
     ],
     presets: {
-      focus: { cicadas: 0.25, fan: 0.35, television: 0.05, room: 0.2, leaves: 0.1, marbles: 0.1, "marbles-alt": 0 },
-      relax: { cicadas: 0.35, fan: 0.25, television: 0.15, room: 0.15, leaves: 0.07, marbles: 0.3, "marbles-alt": 0.34 },
-      sleep: { cicadas: 0.15, fan: 0.4, television: 0.08, room: 0.25, leaves: 0.07, marbles: 0, "marbles-alt": 0 }
+      focus: { cicadas: 0.25, fan: 0.35, television: 0.05, room: 0.2, leaves: 0.1, "leaves-gust": 0.18, "leaves-gust-alt": 0 },
+      relax: { cicadas: 0.35, fan: 0.25, television: 0.15, room: 0.15, leaves: 0.07, "leaves-gust": 0.42, "leaves-gust-alt": 0.46 },
+      sleep: { cicadas: 0.15, fan: 0.4, television: 0.08, room: 0.25, leaves: 0.07, "leaves-gust": 0.08, "leaves-gust-alt": 0.06 }
     }
   },
   {
