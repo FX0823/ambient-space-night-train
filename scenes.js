@@ -25,17 +25,19 @@ window.SCENES = [
     cover: "./assets/images/snow-room-cover.png", video: "./assets/video/snow-room-loop-base.mp4",
     fullMixAudio: "./assets/audio/snow-room.mp3",
     tracks: [
-      { id: "winter-wind", name: "窗外雪风", url: "./assets/audio/snow-room/tracks/winter_wind.mp3", kind: "loop", volume: 0.65, control: true },
-      { id: "heater", name: "取暖器", url: "./assets/audio/snow-room/tracks/heater.mp3", kind: "loop", volume: 0.78, control: true },
-      { id: "room", name: "室内空气", url: "./assets/audio/snow-room/tracks/room_ambience.mp3", kind: "loop", volume: 0.7, control: true },
-      { id: "rocking-chair", name: "摇椅与生活细节", url: "./assets/audio/snow-room/tracks/rocking_chair.mp3", kind: "event", volume: 0.62, control: true, times: [182, 664] },
-      { id: "kettle", name: "烧水", url: "./assets/audio/snow-room/tracks/kettle.mp3", kind: "event", volume: 0.62, control: false, times: [301, 779] },
-      { id: "dog", name: "远处小狗", url: "./assets/audio/snow-room/tracks/dog_bark.mp3", kind: "event", volume: 0.5, control: false, times: [424] }
+      { id: "winter-wind", name: "窗外雪风", url: "./assets/audio/snow-room/tracks/winter_wind.mp3", kind: "loop", volume: 0.52, control: true },
+      { id: "snow-texture", name: "窗边风雪细节", url: "./assets/audio/snow-room/tracks/window_snow_texture.mp3", kind: "loop", volume: 0.42, control: true },
+      { id: "heater", name: "取暖器", url: "./assets/audio/snow-room/tracks/heater.mp3", kind: "loop", volume: 0.64, control: true },
+      { id: "room", name: "室内空气", url: "./assets/audio/snow-room/tracks/room_ambience.mp3", kind: "loop", volume: 0.62, control: true },
+      { id: "rocking-chair", name: "摇椅与生活细节", url: "./assets/audio/snow-room/tracks/rocking_chair.mp3", kind: "event", volume: 0.62, control: true, times: [42, 245, 506, 792] },
+      { id: "kettle", name: "烧水", url: "./assets/audio/snow-room/tracks/kettle.mp3", kind: "event", volume: 0.62, control: false, times: [116, 438, 735] },
+      { id: "dog", name: "远处小狗", url: "./assets/audio/snow-room/tracks/dog_bark.mp3", kind: "event", volume: 0.5, control: false, times: [326, 676] },
+      { id: "cup", name: "杯子轻放", url: "./assets/audio/snow-room/tracks/cup_detail.mp3", kind: "event", volume: 0.4, control: true, times: [205, 598, 846] }
     ],
     presets: {
-      focus: { "winter-wind": 0.62, heater: 0.82, room: 0.72, "rocking-chair": 0.25, kettle: 0.28, dog: 0.18 },
-      relax: { "winter-wind": 0.68, heater: 0.74, room: 0.7, "rocking-chair": 0.58, kettle: 0.55, dog: 0.42 },
-      sleep: { "winter-wind": 0.42, heater: 0.72, room: 0.62, "rocking-chair": 0.12, kettle: 0.08, dog: 0.04 }
+      focus: { "winter-wind": 0.5, "snow-texture": 0.34, heater: 0.62, room: 0.6, "rocking-chair": 0.3, kettle: 0.25, dog: 0.12, cup: 0.24 },
+      relax: { "winter-wind": 0.52, "snow-texture": 0.42, heater: 0.64, room: 0.62, "rocking-chair": 0.58, kettle: 0.52, dog: 0.35, cup: 0.4 },
+      sleep: { "winter-wind": 0.32, "snow-texture": 0.18, heater: 0.68, room: 0.62, "rocking-chair": 0.12, kettle: 0.06, dog: 0.02, cup: 0.08 }
     }
   },
   {
