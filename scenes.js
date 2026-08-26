@@ -41,22 +41,26 @@ window.SCENES = [
   {
     id: "forest-cabin", name: "林间小屋",
     audioMode: "stems", tags: ["focus", "relax"], featured: false,
-    description: "阳光穿过树叶，炉火轻轻燃着。听一会儿森林，也听一会儿自己。",
+    description: "清晨的阳光穿过树叶，鸟鸣从窗外传来。木屋慢慢醒来，空气清爽而安静。",
     cover: "./assets/images/forest-room.png", video: "./assets/video/forest-cabin-loop.mp4",
     fullMixAudio: "./assets/audio/forest-cabin/forest-cabin-15min.mp3",
     tracks: [
-      { id: "wind", name: "树叶轻风", url: "./assets/audio/forest-cabin/forest_wind.mp3", kind: "loop", volume: 0.76, control: true },
-      { id: "birds", name: "清晨鸟鸣", url: "./assets/audio/forest-cabin/morning_birds.mp3", kind: "loop", volume: 0.56, control: true },
-      { id: "fire", name: "小炉火", url: "./assets/audio/forest-cabin/small_fireplace.mp3", kind: "loop", volume: 0.6, control: true },
-      { id: "room", name: "木屋空气", url: "./assets/audio/forest-cabin/cabin_room_tone.mp3", kind: "loop", volume: 0.6, control: false },
-      { id: "chime", name: "轻风铃", url: "./assets/audio/forest-cabin/wind_chime.wav", kind: "event", volume: 0.48, control: true, times: [183, 332, 481, 667, 812] },
+      { id: "birds", name: "清晨鸟鸣", url: "./assets/audio/forest-cabin/morning_birds.mp3", kind: "loop", volume: 0.68, control: true },
+      { id: "insects", name: "林间虫鸣", url: "./assets/audio/forest-cabin/forest_insects.mp3", kind: "loop", volume: 0.42, control: true },
+      { id: "wind", name: "阵阵树风", url: "./assets/audio/forest-cabin/forest_wind.mp3", kind: "loop", volume: 0.42, control: true },
+      { id: "room", name: "木屋空气", url: "./assets/audio/forest-cabin/cabin_room_tone.mp3", kind: "loop", volume: 0.45, control: false },
+      { id: "chime", name: "轻风铃", url: "./assets/audio/forest-cabin/wind_chime.wav", kind: "event", volume: 0.44, control: true, times: [96, 302, 515, 741, 875] },
+      { id: "wood", name: "木板轻响", url: "./assets/audio/forest-cabin/cabin_wood_creak.wav", kind: "event", volume: 0.24, control: true, times: [65, 248, 426, 697, 842] },
+      { id: "cup", name: "杯子轻放", url: "./assets/audio/forest-cabin/cabin_cup.wav", kind: "event", volume: 0.3, control: true, times: [139, 588] },
+      { id: "cup-alt", name: "杯子轻碰", url: "./assets/audio/forest-cabin/cabin_cup_alt.wav", kind: "event", volume: 0.26, control: false, times: [335, 779] },
+      { id: "curtain", name: "窗帘轻动", url: "./assets/audio/forest-cabin/cabin_curtain.wav", kind: "event", volume: 0.18, control: false, times: [25, 450] },
       { id: "animal", name: "小动物脚步", url: "./assets/audio/forest-cabin/forest_small_animal.wav", kind: "event", volume: 0.34, control: false, times: [393] },
       { id: "cat", name: "猫呼噜", url: "./assets/audio/forest-cabin/cat_purr.mp3", kind: "event", volume: 0.42, control: false, times: [720] }
     ],
     presets: {
-      focus: { wind: 0.76, birds: 0.38, fire: 0.62, room: 0.62, chime: 0.18, animal: 0.2, cat: 0.28 },
-      relax: { wind: 0.76, birds: 0.56, fire: 0.58, room: 0.58, chime: 0.48, animal: 0.34, cat: 0.42 },
-      sleep: { wind: 0.46, birds: 0.12, fire: 0.6, room: 0.56, chime: 0.08, animal: 0.1, cat: 0.3 }
+      focus: { birds: 0.56, insects: 0.3, wind: 0.32, room: 0.42, chime: 0.16, wood: 0.14, cup: 0.16, "cup-alt": 0.14, curtain: 0.1, animal: 0.16, cat: 0.2 },
+      relax: { birds: 0.68, insects: 0.42, wind: 0.42, room: 0.45, chime: 0.44, wood: 0.24, cup: 0.3, "cup-alt": 0.26, curtain: 0.18, animal: 0.34, cat: 0.42 },
+      sleep: { birds: 0.16, insects: 0.16, wind: 0.2, room: 0.48, chime: 0.06, wood: 0.05, cup: 0.05, "cup-alt": 0.04, curtain: 0.04, animal: 0.08, cat: 0.22 }
     }
   },
   {
@@ -81,4 +85,3 @@ window.SCENES = [
     }
   }
 ];
-
