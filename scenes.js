@@ -146,7 +146,38 @@ window.SCENES = [
       relax: { kitchen: 0.60, television: 0.20, festive: 0.20, room: 0.08, hum: 0.08 },
       sleep: { kitchen: 0.45, television: 0.08, festive: 0.05, room: 0.12, hum: 0.10, chopping: 0, "chopping-alt": 0, "chopping-slow": 0, washing: 0, "washing-alt": 0, clink: 0, "clink-alt": 0, lid: 0, fireworks: 0, "fireworks-alt": 0, "fireworks-soft": 0.16, firecrackers: 0, "firecrackers-alt": 0 }
     }
-  },  {
+  },
+  {
+    id: "afternoon-shop", name: "午后小卖部",
+    audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
+    description: "坐在敞着门的老小卖部里，冰柜低低运转，风扇慢慢吹着，树荫下偶尔有自行车经过。",
+    cover: "./assets/images/afternoon-shop-cover.jpg",
+    video: "./assets/video/afternoon-shop/afternoon-shop.mp4",
+    fullMixAudio: "./assets/audio/afternoon-shop/afternoon-shop-15min-demo.mp3",
+    controlGroups: [
+      { id: "freezer", name: "冰柜", volume: 0.30, members: { "freezer-hum": 1 } },
+      { id: "fan", name: "风扇", volume: 0.20, members: { "shop-fan": 1 } },
+      { id: "street", name: "街道", volume: 0.30, members: { "street-bed": 0.47, leaves: 0.33, scooter: 0.93, bicycle: 0.87 } }
+    ],
+    tracks: [
+      { id: "freezer-hum", name: "冰柜低频", url: "./assets/audio/afternoon-shop/shop_freezer_hum.mp3", kind: "loop", volume: 0.34, control: false },
+      { id: "shop-fan", name: "老式风扇", url: "./assets/audio/afternoon-shop/old_shop_fan.mp3", kind: "loop", volume: 0.21, control: false },
+      { id: "street-bed", name: "午后街道", url: "./assets/audio/afternoon-shop/afternoon_street.mp3", kind: "loop", volume: 0.14, control: false },
+      { id: "leaves", name: "树叶微风", url: "./assets/audio/afternoon-shop/street_leaves_breeze.mp3", kind: "loop", volume: 0.10, control: false },
+      { id: "shop-radio", name: "远处收音机", url: "./assets/audio/afternoon-shop/distant_shop_radio.mp3", kind: "loop", volume: 0.07, control: false },
+      { id: "scooter", name: "远处电动车", url: "./assets/audio/afternoon-shop/scooter_pass.wav", kind: "event", volume: 0.28, control: false, times: [200, 790] },
+      { id: "bicycle", name: "自行车经过", url: "./assets/audio/afternoon-shop/scooter_pass_alt.wav", kind: "event", volume: 0.26, control: false, times: [560] },
+      { id: "bottle", name: "玻璃瓶轻碰", url: "./assets/audio/afternoon-shop/glass_bottle_clink.wav", kind: "event", volume: 0.20, control: false, times: [390, 705] },
+      { id: "plastic", name: "包装袋轻响", url: "./assets/audio/afternoon-shop/plastic_bag_rustle.wav", kind: "event", volume: 0.30, control: false, times: [340, 630] },
+      { id: "coin", name: "柜台硬币", url: "./assets/audio/afternoon-shop/counter_coin.wav", kind: "event", volume: 0.25, control: false, times: [630.5] }
+    ],
+    presets: {
+      focus: { freezer: 0.35, fan: 0.35, street: 0.15, "shop-radio": 0.03, bottle: 0.08, plastic: 0.10, coin: 0.08 },
+      relax: { freezer: 0.30, fan: 0.20, street: 0.30, "shop-radio": 0.08, bottle: 0.20, plastic: 0.30, coin: 0.25 },
+      sleep: { freezer: 0.40, fan: 0.35, street: 0.10, "shop-radio": 0.01, scooter: 0, bicycle: 0, bottle: 0, plastic: 0, coin: 0 }
+    }
+  },
+  {
     id: "night-train", name: "夜行列车",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
     description: "坐在缓慢前行的夜班列车里，听轮轨规律经过，也听见车厢偶尔的生活声。",
