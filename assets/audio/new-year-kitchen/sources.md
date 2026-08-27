@@ -115,36 +115,36 @@
 
 ### `distant_fireworks.wav`（另含两个网页变化版本）
 
-- 原始素材：sfx-distant-fireworks.flac
-- 作者：Starscade
+- 原始素材：Firework2
+- 作者：lezaarth
 - 来源：Freesound
-- 页面：https://freesound.org/people/Starscade/sounds/397251/
+- 页面：https://freesound.org/people/lezaarth/sounds/260665/
 - License：CC0
-- 原始时长：85.805 秒
-- 最终时长：9.000 秒
-- 变化版本：`distant_fireworks_alt.wav` 9.000 秒；`distant_fireworks_soft.wav` 9.000 秒
-- 处理：从三个不同区段裁取；低通、压低峰值、淡入淡出，保留不同距离感。
-- 15 分钟 Demo：5 次，均与爆竹错开
+- 原始时长：216.790 秒
+- 最终时长：14.000 秒
+- 变化版本：`distant_fireworks_alt.wav` 14.000 秒；`distant_fireworks_soft.wav` 14.000 秒
+- 处理：从真实烟花长实录的三个不同区段裁取，保留升空、爆开与尾部回响；仅做 45–50 Hz 高通、9–10 kHz 轻度高频边界、温和动态控制及 1–3 秒淡入淡出，不再强低通。
+- 15 分钟 Demo：5 次，均与爆竹错开；事件响度提高，但由完整起声和自然衰减避免突兀。
 
 ### `distant_firecrackers.wav`（另含一个网页变化版本）
 
-- 原始素材：firecrackers.wav
-- 作者：sbarncar
+- 原始素材：Firecrackers - Spring Festival - Beijing, China
+- 作者：Lenguaverde
 - 来源：Freesound
-- 页面：https://freesound.org/people/sbarncar/sounds/121557/
+- 页面：https://freesound.org/people/Lenguaverde/sounds/381868/
 - License：CC0
-- 原始时长：6.083 秒
-- 最终时长：6.204 秒
-- 变化版本：`distant_firecrackers_alt.wav` 6.542 秒
-- 处理：强低通、动态控制、短延迟/衰减制造隔窗和楼栋距离；在用户试听确认过轻后整体提高 4 dB，使快速爆竹节奏能够穿过锅声但仍保持远景。
-- 15 分钟 Demo：7 段（第一段约 0:32），均与烟花错开
+- 原始时长：120.269 秒
+- 最终时长：12.000 秒
+- 变化版本：`distant_firecrackers_alt.wav` 12.000 秒
+- 处理：从北京除夕夜真实连续燃放实录裁取两个不同区段；保留清楚的噼啪瞬态和空气感，只做 65–70 Hz 高通、9–9.5 kHz 轻度边界、温和压缩、响度匹配及 0.9–2 秒淡入淡出，彻底移除旧版导致“电流感”的强低通与短延迟。
+- 15 分钟 Demo：7 段（第一段约 0:32），均与烟花错开。
 
 ## 15 分钟成品
 
 - `new-year-kitchen-15min-demo.mp3`：900.000 秒，44.1 kHz，双声道，192 kbps
 - `new-year-kitchen-15min-master.wav`：900.000 秒，44.1 kHz，双声道，PCM 16-bit
-- 综合响度：-28.1 LUFS
-- True peak：-3.6 dBFS
+- 综合响度：-24.5 LUFS
+- True peak：-2.5 dBFS
 - 静音检查：没有大于 1.5 秒、低于 -55 dBFS 的意外空白
 - 最后一分钟：不安排切菜、洗碗或爆竹，只保留稳定厨房底层和很轻电视
 

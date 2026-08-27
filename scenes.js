@@ -135,11 +135,11 @@ window.SCENES = [
       { id: "clink", name: "碗碟轻碰", url: "./assets/audio/new-year-kitchen/dish_clink.wav", kind: "event", volume: 0.58, control: false, times: [20, 245, 465, 650, 835] },
       { id: "clink-alt", name: "盘子轻放", url: "./assets/audio/new-year-kitchen/dish_clink_alt.wav", kind: "event", volume: 0.60, control: false, times: [95, 315, 585, 730] },
       { id: "lid", name: "锅盖细节", url: "./assets/audio/new-year-kitchen/pot_lid_detail.wav", kind: "event", volume: 0.55, control: false, times: [75, 280, 500, 625, 805] },
-      { id: "fireworks", name: "远处烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks.wav", kind: "event", volume: 0.82, control: false, times: [210, 690] },
-      { id: "fireworks-alt", name: "烟花远响", url: "./assets/audio/new-year-kitchen/distant_fireworks_alt.wav", kind: "event", volume: 0.84, control: false, times: [360, 825] },
-      { id: "fireworks-soft", name: "很远烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks_soft.wav", kind: "event", volume: 0.90, control: false, times: [540] },
-      { id: "firecrackers", name: "远处爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers.wav", kind: "event", volume: 1.00, control: false, times: [32, 305, 625, 815] },
-      { id: "firecrackers-alt", name: "更远爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers_alt.wav", kind: "event", volume: 1.00, control: false, times: [155, 470, 720] }
+      { id: "fireworks", name: "远处烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks.wav", kind: "event", volume: 0.78, control: false, times: [210, 690] },
+      { id: "fireworks-alt", name: "烟花远响", url: "./assets/audio/new-year-kitchen/distant_fireworks_alt.wav", kind: "event", volume: 0.80, control: false, times: [360, 825] },
+      { id: "fireworks-soft", name: "很远烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks_soft.wav", kind: "event", volume: 0.72, control: false, times: [540] },
+      { id: "firecrackers", name: "远处爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers.wav", kind: "event", volume: 0.82, control: false, times: [32, 305, 625, 815] },
+      { id: "firecrackers-alt", name: "更远爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers_alt.wav", kind: "event", volume: 0.78, control: false, times: [155, 470, 720] }
     ],
     presets: {
       focus: { kitchen: 0.55, television: 0.08, festive: 0.10, room: 0.10, hum: 0.09, chopping: 0.30, "chopping-alt": 0.26, "chopping-slow": 0.30, washing: 0.26, "washing-alt": 0.24, clink: 0.30, "clink-alt": 0.30, lid: 0.26, fireworks: 0.32, "fireworks-alt": 0.30, "fireworks-soft": 0.34, firecrackers: 0.16, "firecrackers-alt": 0.14 },
