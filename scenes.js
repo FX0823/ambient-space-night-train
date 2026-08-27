@@ -110,6 +110,44 @@ window.SCENES = [
     }
   },
   {
+    id: "new-year-kitchen", name: "年夜饭前的厨房",
+    audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
+    description: "除夕夜的厨房热气腾腾，锅里慢慢咕嘟着。家人在镜头外备菜，客厅的电视和窗外年味远远陪着。",
+    cover: "./assets/images/new-year-kitchen-cover.jpg",
+    video: "./assets/video/new-year-kitchen/new-year-kitchen.mp4",
+    fullMixAudio: "./assets/audio/new-year-kitchen/new-year-kitchen-15min-demo.mp3",
+    controlGroups: [
+      { id: "kitchen", name: "厨房忙碌", volume: 0.60, members: { simmer: 0.45, steam: 0.10, chopping: 0.95, "chopping-alt": 0.95, "chopping-slow": 0.95, washing: 0.90, "washing-alt": 0.90, clink: 1, "clink-alt": 1, lid: 1 } },
+      { id: "television", name: "电视陪伴", volume: 0.20, members: { tv: 0.50 } },
+      { id: "festive", name: "窗外年味", volume: 0.20, members: { fireworks: 4, "fireworks-alt": 4, "fireworks-soft": 4, firecrackers: 4, "firecrackers-alt": 4 } }
+    ],
+    tracks: [
+      { id: "simmer", name: "炖锅咕嘟", url: "./assets/audio/new-year-kitchen/gentle_simmer.mp3", kind: "loop", volume: 0.27, control: false },
+      { id: "room", name: "厨房空气", url: "./assets/audio/new-year-kitchen/kitchen_room_tone.mp3", kind: "loop", volume: 0.13, control: false },
+      { id: "hum", name: "灶具低频", url: "./assets/audio/new-year-kitchen/kitchen_hum.mp3", kind: "loop", volume: 0.10, control: false },
+      { id: "steam", name: "柔和蒸汽", url: "./assets/audio/new-year-kitchen/steam_soft.mp3", kind: "loop", volume: 0.06, control: false },
+      { id: "tv", name: "远处电视", url: "./assets/audio/new-year-kitchen/distant_tv_gala.mp3", kind: "loop", volume: 0.10, control: false },
+      { id: "chopping", name: "镜头外切菜", url: "./assets/audio/new-year-kitchen/soft_chopping.wav", kind: "event", volume: 0.58, control: false, times: [120] },
+      { id: "chopping-alt", name: "切菜变化", url: "./assets/audio/new-year-kitchen/soft_chopping_alt.wav", kind: "event", volume: 0.60, control: false, times: [510] },
+      { id: "chopping-slow", name: "稍慢切菜", url: "./assets/audio/new-year-kitchen/soft_chopping_slow.wav", kind: "event", volume: 0.62, control: false, times: [790] },
+      { id: "washing", name: "水槽洗碗", url: "./assets/audio/new-year-kitchen/dish_washing.wav", kind: "event", volume: 0.52, control: false, times: [270] },
+      { id: "washing-alt", name: "洗碗变化", url: "./assets/audio/new-year-kitchen/dish_washing_alt.wav", kind: "event", volume: 0.54, control: false, times: [630] },
+      { id: "clink", name: "碗碟轻碰", url: "./assets/audio/new-year-kitchen/dish_clink.wav", kind: "event", volume: 0.72, control: false, times: [170, 455, 690] },
+      { id: "clink-alt", name: "盘子轻放", url: "./assets/audio/new-year-kitchen/dish_clink_alt.wav", kind: "event", volume: 0.78, control: false, times: [290, 575, 815] },
+      { id: "lid", name: "锅盖细节", url: "./assets/audio/new-year-kitchen/pot_lid_detail.wav", kind: "event", volume: 0.72, control: false, times: [235, 460, 760] },
+      { id: "fireworks", name: "远处烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks.wav", kind: "event", volume: 0.82, control: false, times: [210, 690] },
+      { id: "fireworks-alt", name: "烟花远响", url: "./assets/audio/new-year-kitchen/distant_fireworks_alt.wav", kind: "event", volume: 0.84, control: false, times: [360, 825] },
+      { id: "fireworks-soft", name: "很远烟花", url: "./assets/audio/new-year-kitchen/distant_fireworks_soft.wav", kind: "event", volume: 0.90, control: false, times: [540] },
+      { id: "firecrackers", name: "远处爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers.wav", kind: "event", volume: 0.78, control: false, times: [390, 795] },
+      { id: "firecrackers-alt", name: "更远爆竹", url: "./assets/audio/new-year-kitchen/distant_firecrackers_alt.wav", kind: "event", volume: 0.82, control: false, times: [605] }
+    ],
+    presets: {
+      focus: { kitchen: 0.55, television: 0.10, festive: 0.10, room: 0.15, hum: 0.12, chopping: 0.28, "chopping-alt": 0.24, "chopping-slow": 0.28, washing: 0.24, "washing-alt": 0.22, clink: 0.24, "clink-alt": 0.24, lid: 0.22, fireworks: 0.32, "fireworks-alt": 0.30, "fireworks-soft": 0.34, firecrackers: 0.16, "firecrackers-alt": 0.14 },
+      relax: { kitchen: 0.60, television: 0.20, festive: 0.20, room: 0.13, hum: 0.10 },
+      sleep: { kitchen: 0.45, television: 0.10, festive: 0.05, room: 0.18, hum: 0.12, chopping: 0, "chopping-alt": 0, "chopping-slow": 0, washing: 0, "washing-alt": 0, clink: 0, "clink-alt": 0, lid: 0, fireworks: 0, "fireworks-alt": 0, "fireworks-soft": 0.16, firecrackers: 0, "firecrackers-alt": 0 }
+    }
+  },
+  {
     id: "night-train", name: "夜行列车",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
     description: "坐在缓慢前行的夜班列车里，听轮轨规律经过，也听见车厢偶尔的生活声。",

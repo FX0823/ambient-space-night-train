@@ -51,6 +51,8 @@ const state = {
   nodes: new Map(),
   values: new Map(),
   enabled: new Map(),
+  groupValues: new Map(),
+  groupEnabled: new Map(),
   activePreset: "relax",
   timerEndsAt: null,
   timerId: null,
@@ -200,6 +202,10 @@ function buildAudio(scene) {
     state.values.set(track.id, track.volume ?? 0.7);
     state.enabled.set(track.id, true);
   });
+  (scene.controlGroups || []).forEach((group) => {
+    state.groupValues.set(group.id, group.volume ?? 0.5);
+    state.groupEnabled.set(group.id, true);
+  });
   applyPreset("relax", false);
 }
 
@@ -212,6 +218,8 @@ function disposeAudio() {
   state.nodes.clear();
   state.values.clear();
   state.enabled.clear();
+  state.groupValues.clear();
+  state.groupEnabled.clear();
   state.triggered.clear();
 }
 
@@ -225,13 +233,24 @@ function applyVolumes() {
 function renderSoundControls() {
   const scene = state.scene;
   if (!scene) return;
-  const controlled = [...state.nodes.values()].filter(({ track }) => track.control !== false);
+  const controlled = scene.controlGroups?.length
+    ? scene.controlGroups.map((group) => ({
+        track: group,
+        value: state.groupValues.get(group.id) ?? 0,
+        on: state.groupEnabled.get(group.id) !== false
+      }))
+    : [...state.nodes.values()]
+        .filter(({ track }) => track.control !== false)
+        .map(({ track }) => ({
+          track,
+          value: state.values.get(track.id) ?? 0,
+          on: state.enabled.get(track.id) !== false
+        }));
   els.presets.innerHTML = Object.keys(scene.presets || {}).map((key) =>
     `<button type="button" data-preset="${key}" class="${state.activePreset === key ? "is-active" : ""}">${presetNames[key] || key}</button>`
   ).join("");
-  els.tracks.innerHTML = controlled.map(({ track }) => {
-    const value = Math.round((state.values.get(track.id) ?? 0) * 100);
-    const on = state.enabled.get(track.id);
+  els.tracks.innerHTML = controlled.map(({ track, value: rawValue, on }) => {
+    const value = Math.round(rawValue * 100);
     return `<div class="track-row ${on ? "" : "is-muted"}" data-track-row="${track.id}">
       <div class="track-meta"><button type="button" class="track-toggle" data-track-toggle="${track.id}" aria-pressed="${on}"><span></span></button><label for="track-${track.id}">${track.name}</label><output>${value}%</output></div>
       <input id="track-${track.id}" data-track-range="${track.id}" type="range" min="0" max="100" value="${value}" aria-label="${track.name}音量" />
@@ -243,11 +262,21 @@ function applyPreset(key, rerender = true) {
   const preset = state.scene?.presets?.[key];
   if (!preset) return;
   Object.entries(preset).forEach(([id, value]) => {
-    if (state.values.has(id)) state.values.set(id, value);
+    if (state.groupValues.has(id)) applyGroupValue(id, value);
+    else if (state.values.has(id)) state.values.set(id, value);
   });
   state.activePreset = key;
   applyVolumes();
   if (rerender) renderSoundControls();
+}
+
+function applyGroupValue(groupId, value) {
+  const group = state.scene?.controlGroups?.find((item) => item.id === groupId);
+  if (!group) return;
+  state.groupValues.set(groupId, value);
+  Object.entries(group.members || {}).forEach(([trackId, scale]) => {
+    if (state.values.has(trackId)) state.values.set(trackId, Math.max(0, Math.min(1, value * scale)));
+  });
 }
 
 function selectScene(scene) {
@@ -550,7 +579,10 @@ els.presets.addEventListener("click", (event) => {
 els.tracks.addEventListener("input", (event) => {
   const range = event.target.closest("[data-track-range]");
   if (!range) return;
-  state.values.set(range.dataset.trackRange, Number(range.value) / 100);
+  const id = range.dataset.trackRange;
+  const value = Number(range.value) / 100;
+  if (state.groupValues.has(id)) applyGroupValue(id, value);
+  else state.values.set(id, value);
   state.activePreset = "";
   const row = range.closest(".track-row");
   row.querySelector("output").textContent = `${range.value}%`;
@@ -561,9 +593,23 @@ els.tracks.addEventListener("click", (event) => {
   const button = event.target.closest("[data-track-toggle]");
   if (!button) return;
   const id = button.dataset.trackToggle;
-  const enabled = !state.enabled.get(id);
-  state.enabled.set(id, enabled);
-  if (!enabled) state.nodes.get(id)?.audio.pause();
+  const isGroup = state.groupEnabled.has(id);
+  const enabled = isGroup ? !state.groupEnabled.get(id) : !state.enabled.get(id);
+  if (isGroup) {
+    state.groupEnabled.set(id, enabled);
+    const group = state.scene?.controlGroups?.find((item) => item.id === id);
+    Object.keys(group?.members || {}).forEach((trackId) => {
+      state.enabled.set(trackId, enabled);
+      const node = state.nodes.get(trackId);
+      if (!enabled) node?.audio.pause();
+      else if (state.playing && node?.track.kind === "loop") node.audio.play().catch(() => {});
+    });
+  } else {
+    state.enabled.set(id, enabled);
+    const node = state.nodes.get(id);
+    if (!enabled) node?.audio.pause();
+    else if (state.playing && node?.track.kind === "loop") node.audio.play().catch(() => {});
+  }
   button.setAttribute("aria-pressed", String(enabled));
   button.closest(".track-row").classList.toggle("is-muted", !enabled);
   applyVolumes();
