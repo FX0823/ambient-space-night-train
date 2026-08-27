@@ -65,3 +65,9 @@
 - 新增 `bicycle_bell.wav` 与 `bicycle_bell_alt.wav`：各 4 秒，来自 Freesound《Bell of VéloToulouse - 2024 September》，作者 Sadiquecat，CC0，原始 8.024 秒，https://freesound.org/people/Sadiquecat/sounds/754250/ 。两种铃声分别处理，15 分钟出现三次，并安排在三次经过声前约 4 秒。
 - 混音比例调整：冰柜由 34% 降至 26%，风扇由 21% 提高至 30%；原街道底层降至 8%，鸟鸣 22%、虫鸣 15%、树叶 7%。
 - 新版 Demo：900.000 秒，综合响度约 -27.5 LUFS，True peak 约 -11.1 dBFS；无异常静音或削波。
+## 第三版：风扇主轨与网页控制拆分
+
+- `old_shop_fan.mp3` 已更换为独立真实风扇实录 Freesound《fan_ambience_sound.mp3》，作者 cynthia_1968，CC0，原始 50.758 秒：https://freesound.org/people/cynthia_1968/sounds/201735/ 。
+- 使用三个不同起点和约 ±0.3% 的轻微速度差，段间 8 秒等功率交叉淡化，生成 120 秒主轨；高通 48 Hz、低通 3.6–4 kHz，并削弱 220 Hz 共振。最终约 -20.5 LUFS、峰值 -7.3 dBFS。
+- 15 分钟 Demo 中风扇提高至 34%，冰柜降至 24%，鸟鸣降至 14%，虫鸣降至 10%；风扇比冰柜平均高约 6 dB，成为明确主轨。
+- 网页不再只显示三个联动滑块，改为六个可调类别：风扇、冰柜、鸟鸣、虫鸣、街道、生活细节。底层文件和事件文件仍保持独立，没有合并为单一音轨。

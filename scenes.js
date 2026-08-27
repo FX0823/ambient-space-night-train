@@ -155,18 +155,21 @@ window.SCENES = [
     video: "./assets/video/afternoon-shop/afternoon-shop.mp4",
     fullMixAudio: "./assets/audio/afternoon-shop/afternoon-shop-15min-demo.mp3",
     controlGroups: [
-      { id: "freezer", name: "冰柜", volume: 0.26, members: { "freezer-hum": 1 } },
-      { id: "fan", name: "风扇", volume: 0.30, members: { "shop-fan": 1 } },
-      { id: "street", name: "街道", volume: 0.32, members: { "street-bed": 0.25, leaves: 0.22, "shop-birds": 0.69, "shop-insects": 0.47, scooter: 0.75, bicycle: 0.75, children: 1.06, "children-alt": 1, bell: 0.47, "bell-alt": 0.44 } }
+      { id: "fan", name: "风扇", volume: 0.34, members: { "shop-fan": 1 } },
+      { id: "freezer", name: "冰柜", volume: 0.24, members: { "freezer-hum": 1 } },
+      { id: "birds", name: "鸟鸣", volume: 0.14, members: { "shop-birds": 1 } },
+      { id: "insects", name: "虫鸣", volume: 0.10, members: { "shop-insects": 1 } },
+      { id: "street", name: "街道", volume: 0.24, members: { "street-bed": 0.33, leaves: 0.29, scooter: 1, bicycle: 1, bell: 0.63, "bell-alt": 0.58 } },
+      { id: "life", name: "生活细节", volume: 0.30, members: { "shop-radio": 0.17, children: 1, "children-alt": 1, bottle: 0.67, plastic: 1, coin: 0.83 } }
     ],
     tracks: [
-      { id: "freezer-hum", name: "冰柜低频", url: "./assets/audio/afternoon-shop/shop_freezer_hum.mp3", kind: "loop", volume: 0.26, control: false },
-      { id: "shop-fan", name: "老式风扇", url: "./assets/audio/afternoon-shop/old_shop_fan.mp3", kind: "loop", volume: 0.30, control: false },
+      { id: "freezer-hum", name: "冰柜低频", url: "./assets/audio/afternoon-shop/shop_freezer_hum.mp3", kind: "loop", volume: 0.24, control: false },
+      { id: "shop-fan", name: "老式风扇", url: "./assets/audio/afternoon-shop/old_shop_fan.mp3", kind: "loop", volume: 0.34, control: false },
       { id: "street-bed", name: "社区空气", url: "./assets/audio/afternoon-shop/afternoon_street.mp3", kind: "loop", volume: 0.08, control: false },
       { id: "leaves", name: "树叶微风", url: "./assets/audio/afternoon-shop/street_leaves_breeze.mp3", kind: "loop", volume: 0.07, control: false },
       { id: "shop-radio", name: "远处收音机", url: "./assets/audio/afternoon-shop/distant_shop_radio.mp3", kind: "loop", volume: 0.05, control: false },
-      { id: "shop-birds", name: "午后鸟鸣", url: "./assets/audio/afternoon-shop/shop_birds.mp3", kind: "loop", volume: 0.22, control: false },
-      { id: "shop-insects", name: "夏日虫鸣", url: "./assets/audio/afternoon-shop/shop_insects.mp3", kind: "loop", volume: 0.15, control: false },
+      { id: "shop-birds", name: "午后鸟鸣", url: "./assets/audio/afternoon-shop/shop_birds.mp3", kind: "loop", volume: 0.14, control: false },
+      { id: "shop-insects", name: "夏日虫鸣", url: "./assets/audio/afternoon-shop/shop_insects.mp3", kind: "loop", volume: 0.10, control: false },
       { id: "scooter", name: "远处电动车", url: "./assets/audio/afternoon-shop/scooter_pass.wav", kind: "event", volume: 0.24, control: false, times: [200, 790] },
       { id: "bicycle", name: "自行车经过", url: "./assets/audio/afternoon-shop/scooter_pass_alt.wav", kind: "event", volume: 0.24, control: false, times: [560] },
       { id: "children", name: "远处孩子玩耍", url: "./assets/audio/afternoon-shop/distant_children.wav", kind: "event", volume: 0.34, control: false, times: [150, 740] },
@@ -178,9 +181,9 @@ window.SCENES = [
       { id: "coin", name: "柜台硬币", url: "./assets/audio/afternoon-shop/counter_coin.wav", kind: "event", volume: 0.25, control: false, times: [630.5] }
     ],
     presets: {
-      focus: { freezer: 0.30, fan: 0.34, street: 0.20, "shop-radio": 0.03, children: 0.12, "children-alt": 0.10, bottle: 0.08, plastic: 0.10, coin: 0.08 },
-      relax: { freezer: 0.26, fan: 0.30, street: 0.32, "shop-radio": 0.05, bottle: 0.20, plastic: 0.30, coin: 0.25 },
-      sleep: { freezer: 0.36, fan: 0.38, street: 0.08, "shop-radio": 0.01, "shop-birds": 0.06, "shop-insects": 0.04, scooter: 0, bicycle: 0, children: 0, "children-alt": 0, bell: 0, "bell-alt": 0, bottle: 0, plastic: 0, coin: 0 }
+      focus: { fan: 0.38, freezer: 0.26, birds: 0.10, insects: 0.07, street: 0.15, life: 0.10 },
+      relax: { fan: 0.34, freezer: 0.24, birds: 0.14, insects: 0.10, street: 0.24, life: 0.30 },
+      sleep: { fan: 0.42, freezer: 0.32, birds: 0.04, insects: 0.03, street: 0.06, life: 0 }
     }
   },
   {
