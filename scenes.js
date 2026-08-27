@@ -150,31 +150,37 @@ window.SCENES = [
   {
     id: "afternoon-shop", name: "午后小卖部",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
-    description: "坐在敞着门的老小卖部里，冰柜低低运转，风扇慢慢吹着，树荫下偶尔有自行车经过。",
+    description: "坐在敞着门的老小卖部里，风扇慢慢吹着，树荫下有鸟虫鸣，巷口偶尔传来孩子和自行车的声音。",
     cover: "./assets/images/afternoon-shop-cover.jpg",
     video: "./assets/video/afternoon-shop/afternoon-shop.mp4",
     fullMixAudio: "./assets/audio/afternoon-shop/afternoon-shop-15min-demo.mp3",
     controlGroups: [
-      { id: "freezer", name: "冰柜", volume: 0.30, members: { "freezer-hum": 1 } },
-      { id: "fan", name: "风扇", volume: 0.20, members: { "shop-fan": 1 } },
-      { id: "street", name: "街道", volume: 0.30, members: { "street-bed": 0.47, leaves: 0.33, scooter: 0.93, bicycle: 0.87 } }
+      { id: "freezer", name: "冰柜", volume: 0.26, members: { "freezer-hum": 1 } },
+      { id: "fan", name: "风扇", volume: 0.30, members: { "shop-fan": 1 } },
+      { id: "street", name: "街道", volume: 0.32, members: { "street-bed": 0.25, leaves: 0.22, "shop-birds": 0.69, "shop-insects": 0.47, scooter: 0.75, bicycle: 0.75, children: 1.06, "children-alt": 1, bell: 0.47, "bell-alt": 0.44 } }
     ],
     tracks: [
-      { id: "freezer-hum", name: "冰柜低频", url: "./assets/audio/afternoon-shop/shop_freezer_hum.mp3", kind: "loop", volume: 0.34, control: false },
-      { id: "shop-fan", name: "老式风扇", url: "./assets/audio/afternoon-shop/old_shop_fan.mp3", kind: "loop", volume: 0.21, control: false },
-      { id: "street-bed", name: "午后街道", url: "./assets/audio/afternoon-shop/afternoon_street.mp3", kind: "loop", volume: 0.14, control: false },
-      { id: "leaves", name: "树叶微风", url: "./assets/audio/afternoon-shop/street_leaves_breeze.mp3", kind: "loop", volume: 0.10, control: false },
-      { id: "shop-radio", name: "远处收音机", url: "./assets/audio/afternoon-shop/distant_shop_radio.mp3", kind: "loop", volume: 0.07, control: false },
-      { id: "scooter", name: "远处电动车", url: "./assets/audio/afternoon-shop/scooter_pass.wav", kind: "event", volume: 0.28, control: false, times: [200, 790] },
-      { id: "bicycle", name: "自行车经过", url: "./assets/audio/afternoon-shop/scooter_pass_alt.wav", kind: "event", volume: 0.26, control: false, times: [560] },
+      { id: "freezer-hum", name: "冰柜低频", url: "./assets/audio/afternoon-shop/shop_freezer_hum.mp3", kind: "loop", volume: 0.26, control: false },
+      { id: "shop-fan", name: "老式风扇", url: "./assets/audio/afternoon-shop/old_shop_fan.mp3", kind: "loop", volume: 0.30, control: false },
+      { id: "street-bed", name: "社区空气", url: "./assets/audio/afternoon-shop/afternoon_street.mp3", kind: "loop", volume: 0.08, control: false },
+      { id: "leaves", name: "树叶微风", url: "./assets/audio/afternoon-shop/street_leaves_breeze.mp3", kind: "loop", volume: 0.07, control: false },
+      { id: "shop-radio", name: "远处收音机", url: "./assets/audio/afternoon-shop/distant_shop_radio.mp3", kind: "loop", volume: 0.05, control: false },
+      { id: "shop-birds", name: "午后鸟鸣", url: "./assets/audio/afternoon-shop/shop_birds.mp3", kind: "loop", volume: 0.22, control: false },
+      { id: "shop-insects", name: "夏日虫鸣", url: "./assets/audio/afternoon-shop/shop_insects.mp3", kind: "loop", volume: 0.15, control: false },
+      { id: "scooter", name: "远处电动车", url: "./assets/audio/afternoon-shop/scooter_pass.wav", kind: "event", volume: 0.24, control: false, times: [200, 790] },
+      { id: "bicycle", name: "自行车经过", url: "./assets/audio/afternoon-shop/scooter_pass_alt.wav", kind: "event", volume: 0.24, control: false, times: [560] },
+      { id: "children", name: "远处孩子玩耍", url: "./assets/audio/afternoon-shop/distant_children.wav", kind: "event", volume: 0.34, control: false, times: [150, 740] },
+      { id: "children-alt", name: "巷口孩子声音", url: "./assets/audio/afternoon-shop/distant_children_alt.wav", kind: "event", volume: 0.32, control: false, times: [450] },
+      { id: "bell", name: "自行车铃", url: "./assets/audio/afternoon-shop/bicycle_bell.wav", kind: "event", volume: 0.15, control: false, times: [196, 786] },
+      { id: "bell-alt", name: "自行车铃变化", url: "./assets/audio/afternoon-shop/bicycle_bell_alt.wav", kind: "event", volume: 0.14, control: false, times: [556] },
       { id: "bottle", name: "玻璃瓶轻碰", url: "./assets/audio/afternoon-shop/glass_bottle_clink.wav", kind: "event", volume: 0.20, control: false, times: [390, 705] },
       { id: "plastic", name: "包装袋轻响", url: "./assets/audio/afternoon-shop/plastic_bag_rustle.wav", kind: "event", volume: 0.30, control: false, times: [340, 630] },
       { id: "coin", name: "柜台硬币", url: "./assets/audio/afternoon-shop/counter_coin.wav", kind: "event", volume: 0.25, control: false, times: [630.5] }
     ],
     presets: {
-      focus: { freezer: 0.35, fan: 0.35, street: 0.15, "shop-radio": 0.03, bottle: 0.08, plastic: 0.10, coin: 0.08 },
-      relax: { freezer: 0.30, fan: 0.20, street: 0.30, "shop-radio": 0.08, bottle: 0.20, plastic: 0.30, coin: 0.25 },
-      sleep: { freezer: 0.40, fan: 0.35, street: 0.10, "shop-radio": 0.01, scooter: 0, bicycle: 0, bottle: 0, plastic: 0, coin: 0 }
+      focus: { freezer: 0.30, fan: 0.34, street: 0.20, "shop-radio": 0.03, children: 0.12, "children-alt": 0.10, bottle: 0.08, plastic: 0.10, coin: 0.08 },
+      relax: { freezer: 0.26, fan: 0.30, street: 0.32, "shop-radio": 0.05, bottle: 0.20, plastic: 0.30, coin: 0.25 },
+      sleep: { freezer: 0.36, fan: 0.38, street: 0.08, "shop-radio": 0.01, "shop-birds": 0.06, "shop-insects": 0.04, scooter: 0, bicycle: 0, children: 0, "children-alt": 0, bell: 0, "bell-alt": 0, bottle: 0, plastic: 0, coin: 0 }
     }
   },
   {

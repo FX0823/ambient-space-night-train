@@ -55,3 +55,13 @@
 - 街道被处理为门外远景，不是商业街；事件均使用完整动作和淡入淡出。
 - 配套画面没有门帘，因此未创建或加入门帘音效。
 - 未加入背景音乐、可辨认歌曲、真实电视节目、清晰对话或人物旁白。
+
+## 第二版：社区自然与生活层修正
+
+- 已彻底停用第一版含远处施工机械声的 Fonoport 庭院实录；`afternoon_street.mp3` 改为本项目生成的 180 秒安静社区空气层，不含施工、车辆发动机、敲击或人声。
+- 新增 `shop_birds.mp3`：300 秒无缝单元，复用林间小屋已验收的 CC0 鸟鸣素材（Freesound《Morning Birds》，nick121087，https://freesound.org/people/nick121087/sounds/342462/），重新削弱尖锐高频并匹配为午后远景。
+- 新增 `shop_insects.mp3`：300 秒无缝单元，复用林间小屋已验收的三种 CC0 蝉虫鸣实录（SamuelGremaud / fraska2），削弱 4.3 kHz 附近刺激感；在新版中持续但不压过鸟鸣与风扇。
+- 新增 `distant_children.wav` 与 `distant_children_alt.wav`：各 16 秒，来自 Freesound《Outdoor Playground/Daycare Soundscape (no cars!)》，作者 CheatinSloth，CC0，原始 80.682 秒，https://freesound.org/people/CheatinSloth/sounds/738778/ 。从两个不同区段裁取，低通、削弱叫喊尖锐感并使用 2.5–4 秒淡入淡出；15 分钟出现三次。
+- 新增 `bicycle_bell.wav` 与 `bicycle_bell_alt.wav`：各 4 秒，来自 Freesound《Bell of VéloToulouse - 2024 September》，作者 Sadiquecat，CC0，原始 8.024 秒，https://freesound.org/people/Sadiquecat/sounds/754250/ 。两种铃声分别处理，15 分钟出现三次，并安排在三次经过声前约 4 秒。
+- 混音比例调整：冰柜由 34% 降至 26%，风扇由 21% 提高至 30%；原街道底层降至 8%，鸟鸣 22%、虫鸣 15%、树叶 7%。
+- 新版 Demo：900.000 秒，综合响度约 -27.5 LUFS，True peak 约 -11.1 dBFS；无异常静音或削波。
