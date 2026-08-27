@@ -185,6 +185,33 @@ window.SCENES = [
     }
   },
   {
+    id: "post-rain-hotspring", name: "雨后山间温泉",
+    audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
+    description: "雨已经停了，温泉水轻轻流着。湿润的山风穿过竹叶，屋檐偶尔落下几滴水。",
+    cover: "./assets/images/post-rain-hotspring-cover.jpg",
+    video: "./assets/video/post-rain-hotspring/post-rain-hotspring.mp4",
+    fullMixAudio: "./assets/audio/post-rain-hotspring/post-rain-hotspring-15min-demo.mp3",
+    controlGroups: [
+      { id: "spring-water", name: "温泉水", volume: 0.45, members: { inflow: 1, surface: 0.62 } },
+      { id: "mountain-air", name: "山风", volume: 0.20, members: { breeze: 1, bamboo: 0.78 } },
+      { id: "post-rain", name: "雨后山林", volume: 0.35, members: { drips: 1.38, "drips-alt": 1.28, "leaf-drips": 1.20, insects: 0.34 } }
+    ],
+    tracks: [
+      { id: "inflow", name: "温泉细流", url: "./assets/audio/post-rain-hotspring/hotspring_inflow.mp3", kind: "loop", volume: 0.45, control: false },
+      { id: "surface", name: "温泉水面", url: "./assets/audio/post-rain-hotspring/hotspring_surface.mp3", kind: "loop", volume: 0.28, control: false },
+      { id: "breeze", name: "山间晚风", url: "./assets/audio/post-rain-hotspring/mountain_breeze.mp3", kind: "loop", volume: 0.20, control: false },
+      { id: "bamboo", name: "湿润竹叶", url: "./assets/audio/post-rain-hotspring/wet_bamboo_forest.mp3", kind: "loop", volume: 0.16, control: false },
+      { id: "insects", name: "远处虫鸣", url: "./assets/audio/post-rain-hotspring/evening_insects.mp3", kind: "loop", volume: 0.12, control: false },
+      { id: "drips", name: "屋檐滴水", url: "./assets/audio/post-rain-hotspring/eaves_dripping.wav", kind: "event", volume: 0.48, control: false, times: [4, 39, 82, 137, 204, 292, 404, 536, 701, 842] },
+      { id: "drips-alt", name: "屋檐滴水变化", url: "./assets/audio/post-rain-hotspring/eaves_dripping_alt.wav", kind: "event", volume: 0.45, control: false, times: [20, 61, 111, 171, 248, 351, 468, 618, 775, 875] },
+      { id: "leaf-drips", name: "竹叶残水", url: "./assets/audio/post-rain-hotspring/wet_leaves_drip.wav", kind: "event", volume: 0.42, control: false, times: [630] }
+    ],
+    presets: {
+      focus: { "spring-water": 0.55, "mountain-air": 0.25, "post-rain": 0.20 },
+      relax: { "spring-water": 0.45, "mountain-air": 0.20, "post-rain": 0.35 },
+      sleep: { "spring-water": 0.60, "mountain-air": 0.20, "post-rain": 0.20, insects: 0.025, drips: 0.20, "drips-alt": 0.18, "leaf-drips": 0.08 }
+    }
+  },  {
     id: "night-train", name: "夜行列车",
     audioMode: "stems", tags: ["focus", "relax", "sleep"], featured: false,
     description: "坐在缓慢前行的夜班列车里，听轮轨规律经过，也听见车厢偶尔的生活声。",
