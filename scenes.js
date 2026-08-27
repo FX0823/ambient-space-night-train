@@ -192,9 +192,12 @@ window.SCENES = [
     video: "./assets/video/post-rain-hotspring/post-rain-hotspring.mp4",
     fullMixAudio: "./assets/audio/post-rain-hotspring/post-rain-hotspring-15min-demo.mp3",
     controlGroups: [
-      { id: "spring-water", name: "温泉水", volume: 0.45, members: { inflow: 1, surface: 0.62 } },
-      { id: "mountain-air", name: "山风", volume: 0.20, members: { breeze: 1, bamboo: 0.78 } },
-      { id: "post-rain", name: "雨后山林", volume: 0.35, members: { drips: 1.38, "drips-alt": 1.28, "leaf-drips": 1.20, insects: 0.34 } }
+      { id: "inflow-control", name: "温泉入水", volume: 0.35, members: { inflow: 1 } },
+      { id: "surface-control", name: "温泉水面", volume: 0.20, members: { surface: 1 } },
+      { id: "dripping-control", name: "屋檐滴水", volume: 0.15, members: { drips: 1, "drips-alt": 0.94, "leaf-drips": 0.78 } },
+      { id: "breeze-control", name: "山间晚风", volume: 0.10, members: { breeze: 1 } },
+      { id: "bamboo-control", name: "湿润竹叶", volume: 0.10, members: { bamboo: 1 } },
+      { id: "insects-control", name: "远处虫鸣", volume: 0.10, members: { insects: 1 } }
     ],
     tracks: [
       { id: "inflow", name: "温泉细流", url: "./assets/audio/post-rain-hotspring/hotspring_inflow.mp3", kind: "loop", volume: 0.45, control: false },
@@ -207,9 +210,9 @@ window.SCENES = [
       { id: "leaf-drips", name: "竹叶残水", url: "./assets/audio/post-rain-hotspring/wet_leaves_drip.wav", kind: "event", volume: 0.42, control: false, times: [630] }
     ],
     presets: {
-      focus: { "spring-water": 0.55, "mountain-air": 0.25, "post-rain": 0.20 },
-      relax: { "spring-water": 0.45, "mountain-air": 0.20, "post-rain": 0.35 },
-      sleep: { "spring-water": 0.60, "mountain-air": 0.20, "post-rain": 0.20, insects: 0.025, drips: 0.20, "drips-alt": 0.18, "leaf-drips": 0.08 }
+      focus: { "inflow-control": 0.45, "surface-control": 0.25, "dripping-control": 0.10, "breeze-control": 0.15, "bamboo-control": 0.08, "insects-control": 0.03 },
+      relax: { "inflow-control": 0.35, "surface-control": 0.20, "dripping-control": 0.15, "breeze-control": 0.10, "bamboo-control": 0.10, "insects-control": 0.10 },
+      sleep: { "inflow-control": 0.42, "surface-control": 0.18, "dripping-control": 0.06, "breeze-control": 0.12, "bamboo-control": 0.08, "insects-control": 0.03 }
     }
   },  {
     id: "night-train", name: "夜行列车",
