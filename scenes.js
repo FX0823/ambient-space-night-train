@@ -196,8 +196,9 @@ window.SCENES = [
       { id: "surface-control", name: "温泉水面", volume: 0.20, members: { surface: 1 } },
       { id: "dripping-control", name: "屋檐滴水", volume: 0.15, members: { drips: 1, "drips-alt": 0.94, "leaf-drips": 0.78 } },
       { id: "breeze-control", name: "山间晚风", volume: 0.10, members: { breeze: 1 } },
-      { id: "bamboo-control", name: "湿润竹叶", volume: 0.10, members: { bamboo: 1 } },
-      { id: "insects-control", name: "远处虫鸣", volume: 0.10, members: { insects: 1 } }
+      { id: "bamboo-control", name: "风吹竹叶", volume: 0.24, members: { bamboo: 2.00, "bamboo-gust": 2.20, "bamboo-gust-alt": 2.10 } },
+      { id: "insects-control", name: "远处虫鸣", volume: 0.25, members: { insects: 2.00 } },
+      { id: "bathing-control", name: "入水出水", volume: 0.28, members: { "enter-water": 0.78, "leave-water": 0.74 } }
     ],
     tracks: [
       { id: "inflow", name: "温泉细流", url: "./assets/audio/post-rain-hotspring/hotspring_inflow.mp3", kind: "loop", volume: 0.45, control: false },
@@ -205,14 +206,18 @@ window.SCENES = [
       { id: "breeze", name: "山间晚风", url: "./assets/audio/post-rain-hotspring/mountain_breeze.mp3", kind: "loop", volume: 0.20, control: false },
       { id: "bamboo", name: "湿润竹叶", url: "./assets/audio/post-rain-hotspring/wet_bamboo_forest.mp3", kind: "loop", volume: 0.16, control: false },
       { id: "insects", name: "远处虫鸣", url: "./assets/audio/post-rain-hotspring/evening_insects.mp3", kind: "loop", volume: 0.12, control: false },
+      { id: "bamboo-gust", name: "竹叶阵风", url: "./assets/audio/post-rain-hotspring/bamboo_gust.wav", kind: "event", volume: 0.32, control: false, times: [95, 415, 760] },
+      { id: "bamboo-gust-alt", name: "竹叶阵风变化", url: "./assets/audio/post-rain-hotspring/bamboo_gust_alt.wav", kind: "event", volume: 0.30, control: false, times: [245, 590, 865] },
+      { id: "enter-water", name: "有人轻轻入水", url: "./assets/audio/post-rain-hotspring/person_entering_water.wav", kind: "event", volume: 0.22, control: false, times: [55, 500] },
+      { id: "leave-water", name: "有人缓慢出水", url: "./assets/audio/post-rain-hotspring/person_leaving_water.wav", kind: "event", volume: 0.21, control: false, times: [285, 760] },
       { id: "drips", name: "屋檐滴水", url: "./assets/audio/post-rain-hotspring/eaves_dripping.wav", kind: "event", volume: 0.48, control: false, times: [4, 39, 82, 137, 204, 292, 404, 536, 701, 842] },
       { id: "drips-alt", name: "屋檐滴水变化", url: "./assets/audio/post-rain-hotspring/eaves_dripping_alt.wav", kind: "event", volume: 0.45, control: false, times: [20, 61, 111, 171, 248, 351, 468, 618, 775, 875] },
       { id: "leaf-drips", name: "竹叶残水", url: "./assets/audio/post-rain-hotspring/wet_leaves_drip.wav", kind: "event", volume: 0.42, control: false, times: [630] }
     ],
     presets: {
-      focus: { "inflow-control": 0.45, "surface-control": 0.25, "dripping-control": 0.10, "breeze-control": 0.15, "bamboo-control": 0.08, "insects-control": 0.03 },
-      relax: { "inflow-control": 0.35, "surface-control": 0.20, "dripping-control": 0.15, "breeze-control": 0.10, "bamboo-control": 0.10, "insects-control": 0.10 },
-      sleep: { "inflow-control": 0.42, "surface-control": 0.18, "dripping-control": 0.06, "breeze-control": 0.12, "bamboo-control": 0.08, "insects-control": 0.03 }
+      focus: { "inflow-control": 0.45, "surface-control": 0.25, "dripping-control": 0.10, "breeze-control": 0.15, "bamboo-control": 0.15, "insects-control": 0.15, "bathing-control": 0.12 },
+      relax: { "inflow-control": 0.35, "surface-control": 0.20, "dripping-control": 0.15, "breeze-control": 0.10, "bamboo-control": 0.24, "insects-control": 0.25, "bathing-control": 0.28 },
+      sleep: { "inflow-control": 0.42, "surface-control": 0.18, "dripping-control": 0.06, "breeze-control": 0.12, "bamboo-control": 0.10, "insects-control": 0.08, "bathing-control": 0.04 }
     }
   },  {
     id: "night-train", name: "夜行列车",
